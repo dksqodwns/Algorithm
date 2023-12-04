@@ -8,4 +8,7 @@ class Solution:
                     result += 1
                     flowerbed[i] = 1
 
-        return result >= n
+        if result >= n:
+            return True
+        else:
+            return False
