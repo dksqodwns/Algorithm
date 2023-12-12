@@ -5,9 +5,7 @@ class Solution:
 
         for x in range(m):
             for y in range(n):
-                if x == 0:
-                    dp[x][y] = 1
-                elif y == 0:
+                if x == 0 or y == 0:
                     dp[x][y] = 1
                 else:
                     dp[x][y] = dp[x - 1][y] + dp[x][y - 1]
