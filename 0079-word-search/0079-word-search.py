@@ -20,10 +20,10 @@ class Solution:
         board[i][j] = "0"  # 이미 지나간 곳은 0으로 바꿔줌
         
         # 왼쪽, 오른쪽, 위쪽, 아래쪽 확인
-        res = (self.dfs(board, i-1, j, word[1:]) or 
+        result = (self.dfs(board, i-1, j, word[1:]) or 
                self.dfs(board, i+1, j, word[1:]) or 
                self.dfs(board, i, j-1, word[1:]) or 
                self.dfs(board, i, j+1, word[1:]))
         
         board[i][j] = temp  # 다시 원상복귀
-        return res
+        return result
